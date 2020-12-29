@@ -10,16 +10,16 @@
     <h1>Acceso</h1>
     <form action="<?php echo $_SERVER["PHP_SELF"]  ?>" method="POST">
         <div>
-            <label for="">Correo Electronico:</label>
-            <input type="text" name="correo" id="">
+            <label for="">Usuario:</label>
+            <input type="text" name="nombreUser" id="">
         </div>
 
         <div>
             <label for="">Contraseña:</label>
-            <input type="text" name="correo" id="">
+            <input type="password" name="contrasena" id="">
         </div>
         <div>
-            <input type="submit" value="Entrar" name="acceso">
+            <input type="submit" value="Entrar">
         </div>
     </form>
 

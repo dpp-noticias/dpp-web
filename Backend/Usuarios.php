@@ -27,7 +27,7 @@ function registrarUsuarios()
 function iniciarSesion()
 {
     $errores = [];
-    if (empty($_POST['usuario'])) {
+    if (empty($_POST['nombreUser'])) {
         $errores[] = 'Tiene que rellenar el campo';
     }
 
@@ -41,22 +41,21 @@ function iniciarSesion()
         // unset($errores);
     } else {
         $conexion = conectBDD();
-        $usuario = $_POST['usuario'];
-        $contraseña = md5($_POST['contrasena']);
+        $usuario = $_POST['nombreUser'];
+        // $contraseña = md5($_POST['contrasena']);
+        $contraseña = $_POST['contrasena'];
 
-        $select_usuario = "SELECT Nombre FROM usuarios WHERE Nombre = '$usuario' AND Contrasena ='$contraseña'";
+
+        $select_usuario = "SELECT NombreUsuario FROM usuarios WHERE NombreUsuario = '$usuario' AND Contrasena ='$contraseña'";
         $resultado = $conexion->query($select_usuario);
-
+        echo $select_usuario;
 
         if ($resultado->fetch_row()) {
             $_SESSION['usuario'] = $usuario;
-            // header('Location:/ProyectoGymArtCopia/index.php');
+            echo "Logeado con exito";
+            // header('Location:');
         } else {
-            echo "<script>  Swal.fire({
-                title: 'Error',
-                text: 'La conexion no se ha establecido con exito',
-                type: 'error',
-              });</script>";
+           
         }
     }
 }
