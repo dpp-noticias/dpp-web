@@ -8,14 +8,14 @@ function registrarUsuarios()
    
     $correoElectronico = $_POST["correo"];
     $nombreUser = $_POST["nombreUser"];
-    $contrasena = $_POST["contrasena"];
+    $contrasena = md5($_POST["contrasena"]);
     $rol = $_POST["rol"];
 
     $anadir_usuario = "INSERT INTO usuarios(correo, NombreUsuario, Contrasena, Rol) 
     VALUES ('$correoElectronico','$nombreUser','$contrasena','$rol')";
     $resultado = $conexion->query($anadir_usuario);
 
-    echo $anadir_usuario;
+    // echo $anadir_usuario;
     if ($resultado) {
         // header("Location:");
         echo "<p>Se ha añadido $conexion->affected_rows registros con exito</p>";
@@ -42,7 +42,7 @@ function iniciarSesion()
     } else {
         $conexion = conectBDD();
         $usuario = $_POST['nombreUser'];
-        // $contraseña = md5($_POST['contrasena']);
+        $contraseña = md5($_POST['contrasena']);
         $contraseña = $_POST['contrasena'];
 
 
