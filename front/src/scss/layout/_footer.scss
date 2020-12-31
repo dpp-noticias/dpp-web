@@ -1,3 +1,21 @@
-body{
-  background: purple;
+.dashboard {
+  
+  &__footer {
+    
+  }
+  
+  &__footerItem {
+    
+    &--info {
+      
+    }
+    
+    &--employees {
+      
+    }
+    
+    &--contact {
+      
+    }
+  }
 }
