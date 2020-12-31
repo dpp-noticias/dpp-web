@@ -1,2 +1,7 @@
 body {
-  background-color: purple; }
+  background: purple;
+}
+
+h1 {
+  color: red;
+}
