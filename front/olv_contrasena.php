@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Recuperar Contraseña</title>
 </head>
 <?php include "../Backend/Usuarios.php" ?>
 
 <body>
-    <h1>Acceso</h1>
+    <h1>Recuperar contraseña</h1>
     <form action="<?php echo $_SERVER["PHP_SELF"]  ?>" method="POST">
         <div>
             <label for="">Usuario:</label>
@@ -17,19 +17,19 @@
         </div>
 
         <div>
-            <label for="">Contraseña:</label>
+            <label for="">Nueva Contraseña:</label>
             <input type="password" name="contrasena" id="">
         </div>
-        <a href="olv_contrasena.php">¿Olvido la contraseña?</a>
+
         <div>
             <input type="submit" value="Entrar">
         </div>
     </form>
-<button><a href="registrar.php">Registrar</a></button>
+
     <?php
 
     if ($_POST) {
-        iniciarSesion();
+        recuContrasena();
     }
     ?>
 </body>
