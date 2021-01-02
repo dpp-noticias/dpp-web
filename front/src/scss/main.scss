@@ -1,7 +1,10 @@
+@import './abstracts/utilities';
+@import './abstracts/mixins';
+
 @import './base/base';
 @import './base/typography';
 
-@import ',/pages/dashboard';
+@import './pages/dashboard';
 
 @import './layout/footer';
 @import './layout/header';

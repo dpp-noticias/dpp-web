@@ -1,21 +1,63 @@
-.dashboard {
+.footer {
+  position: absolute;
+  bottom: 0;
   
-  &__footer {
+  background-color: #504545;
+  display: flex;
+  flex-wrap: wrap;
+  
+  color: white;
+  font-size: 1.5rem;
+  
+  width: 100%;
+
+  @include centerX();
+  
+  &__item {
+    flex: 1;
+    margin: 0 3rem;
+    padding: 2rem 0;
     
-  }
-  
-  &__footerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 30rem;
     
     &--info {
       
     }
     
     &--employees {
-      
+      justify-content: space-between;
     }
     
     &--contact {
       
     }
   }
+  
+  &__logo {
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+  
+  &__employee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__employeeRole {
+    text-transform: uppercase;
+  }
+  
+  &__employeeName {
+  }
+  
+  &__employeeEmail {
+    
+  }
+  
+  
 }

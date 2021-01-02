@@ -1,0 +1,6 @@
+// Creation of mixins.
+
+@mixin centerX() {
+  left: 50%;
+  transform: translateX(-50%);
+};
