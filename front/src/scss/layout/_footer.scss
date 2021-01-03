@@ -10,7 +10,12 @@
   font-size: 1.5rem;
   
   width: 100%;
-
+  @include tablet{
+    display: none;
+  }
+  @include mobile{
+     display: none;
+  }
   @include centerX();
   
   &__item {

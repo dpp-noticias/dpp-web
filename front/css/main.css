@@ -1,60 +1,160 @@
 .ds-block {
-  display: block; }
+  display: block;
+}
 
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 /* Font-size to use rem that helps for responsive design. It represents 10px
   1rem = 10px,
   4.5rem = 45px
 */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
-  font-family: 'Fira Sans', sans-serif; }
+  font-family: 'Fira Sans', sans-serif;
+}
 
 .bold {
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 .dashboard {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 20rem min-content; }
+  /* grid-template-rows: 20rem min-content; */
+}
 
 .footer {
   position: absolute;
   bottom: 0;
   background-color: #504545;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: white;
   font-size: 1.5rem;
   width: 100%;
   left: 50%;
-  transform: translateX(-50%); }
-  .footer__item {
-    flex: 1;
-    margin: 0 3rem;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 30rem; }
-    .footer__item--employees {
-      justify-content: space-between; }
-  .footer__logo {
-    width: 40%;
-    margin-bottom: 2rem; }
-  .footer__employee {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  .footer__employeeRole {
-    text-transform: uppercase; }
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 
-h1 {
-  color: red; }
+@media screen and (max-width: 620px) {
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .footer {
+    display: none;
+  }
+}
+
+.footer__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 3rem;
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30rem;
+}
+
+.footer__item--employees {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  width: 40%;
+  margin-bottom: 2rem;
+}
+
+.footer__employee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__employeeRole {
+  text-transform: uppercase;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: url("/front/assets/FONDO1.jpg");
+}
+
+.header .dashboard__header--burger {
+  margin: 1.3rem 0 1.3rem 1.6rem;
+}
+
+.header .dashboard__header--burger div {
+  width: 2rem;
+  height: 0.450rem;
+  background-color: black;
+  margin: 0.35rem 0;
+}
+
+.header .dashboard__header--logo {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-shadow: 0.5px 1px 4px black;
+}
+
+.header .dashboard__header--logo img {
+  width: 68px;
+  height: 31px;
+}
+
+.header .dashboard__header--logo p {
+  font-style: italic;
+  font-weight: 500;
+}
