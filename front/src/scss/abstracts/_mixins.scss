@@ -5,6 +5,11 @@
   transform: translateX(-50%);
 };
 
+@mixin centerY() {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*
   RESPONSIVE:
   
