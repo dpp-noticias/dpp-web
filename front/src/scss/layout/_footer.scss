@@ -11,10 +11,9 @@
   
   width: 100%;
   
-
   @include centerX();
   
-  @include tablet {
+  @include respond(tablet) {
     display: none;
   }
   
