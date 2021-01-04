@@ -10,13 +10,13 @@
   font-size: 1.5rem;
   
   width: 100%;
-  @include tablet{
+  
+
+  @include centerX();
+  
+  @include tablet {
     display: none;
   }
-  @include mobile{
-     display: none;
-  }
-  @include centerX();
   
   &__item {
     flex: 1;
