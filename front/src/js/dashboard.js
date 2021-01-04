@@ -1,3 +1,4 @@
+import '../scss/main.scss';
 import { Header } from './layoutClasses/Header.js';
 
 const HeaderDashboard = new Header('.dashboard__header');
