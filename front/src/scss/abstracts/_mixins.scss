@@ -45,3 +45,24 @@
     @media only screen and (min-width: 112.5em) { @content };
   }
 }
+
+@mixin respondMin($breakpoint) {
+  @if $breakpoint == sm-phone {
+    @media only screen and (min-width: 21.875em) { @content };
+  }
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 31.25em) { @content };
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 43.75em) { @content };
+  }
+  @if $breakpoint == laptop {
+    @media only screen and (min-width: 62.5em) { @content };
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 93.75em) { @content };
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) { @content };
+  }
+}
