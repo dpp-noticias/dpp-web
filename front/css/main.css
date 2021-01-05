@@ -75,7 +75,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
-  background-image: url("../../../assets/FONDO1.jpg");
+  background-image: url("../assets/FONDO1.jpg");
   padding: 1rem 3rem; }
   .header__burgerBox {
     cursor: pointer;
