@@ -1,0 +1,8 @@
+.sobreNosotros {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  
+  @include respondMin(tablet) {
+    grid-template-rows: repeat(2, min-content);
+  }
+}

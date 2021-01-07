@@ -1,7 +1,7 @@
 .navMenu {
   position: fixed;
   top: 6.3rem;
-  
+
   display: flex;
   flex-direction: column;
   
@@ -12,13 +12,13 @@
   height: 0; // Change to calc(100% - 6.3rem)
   width: 100%;
   transition: all .3s ease-in;
+  z-index: 100;
   
   @include respondMin(tablet) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     
-    position: static;
     visibility: visible;
     overflow: visible;
     

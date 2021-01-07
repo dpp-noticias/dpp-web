@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 exports.loadSCSS = () => ({
   module: {
@@ -106,6 +107,7 @@ exports.devServer = ({ port } = {}) => ({
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port,
-    open: true
+    open: true,
+    watchContentBase: true,
   }
 })
