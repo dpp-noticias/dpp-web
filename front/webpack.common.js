@@ -3,7 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { merge } = require('webpack-merge');
 const parts = require('./webpack.parts.js');
 
-let htmlPageNames = ['dashboard', 'login', 'olv_contrasena', 'registrar', 'sobreNosotros'];
+let htmlPageNames = [
+  'dashboard',
+  'login',
+  'olv_contrasena',
+  'registrar',
+  'sobreNosotros',
+  'detallesNoticia'
+];
+
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/html/${name}.html`,

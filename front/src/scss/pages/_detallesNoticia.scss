@@ -1,0 +1,78 @@
+.detallesNoticia {
+  
+  &__container {
+    display: flex;
+    max-width: 90rem;
+    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  &__article {
+    margin-right: 3rem;
+  }
+  
+  &__category {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #286513;
+    margin: 2rem 0;
+  }
+  
+  &__header {
+    
+  }
+  
+  &__liga {
+    
+  }
+  
+  &__title {
+    
+  }
+  
+  &__phraseNoticia {
+    
+  }
+  
+  &__main {
+    
+  }
+  
+  &__portraitBox {
+    
+  }
+  
+  &__portraitImg {
+    
+  }
+  
+  &__footImg {
+    
+  }
+  
+  &__nombreAutor {
+    
+  }
+  
+  &__textContent {
+    
+  }
+  
+  &__aside {
+    
+  }
+  
+  &__ultimasNoticias {
+    
+  }
+  
+  &__ultimasNoticiasPortrait {
+    
+  }
+  
+  &__ultimasNoticiasItem {
+    
+  }
+}
