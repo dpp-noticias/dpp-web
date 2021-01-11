@@ -1,5 +1,5 @@
 .dashboard__body{
-  @include respondMin (laptop){
+  @include respondMin (tablet){
       width: 77.25rem;
       margin: 0 auto;
   }
@@ -11,9 +11,9 @@
         grid-auto-rows: 9rem;
         
         @include respondMin (phone){
-          margin: 20px auto;
+          margin: 20px 0px 0px 50px;
           grid-auto-rows: 23.375rem;
-          grid-gap: 1rem;
+          grid-gap: 1.1rem;
         }
      
         justify-content: center;
