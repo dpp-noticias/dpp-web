@@ -7,12 +7,33 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    
+    @include respond(tablet) {
+      justify-content: center;
+    }
   }
   
   &__article {
     width: 70%;
     padding: 2rem 0;
     margin-right: 3rem;
+    
+    @include respond(tablet) {
+      width: 80%;
+      margin-right: 0;
+    }
+    
+    @include respond(phone) {
+      width: 100%;
+      
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      
+      & > * {
+        order: 1;
+      }
+    }
   }
   
   &__category {
@@ -20,6 +41,10 @@
     font-weight: 600;
     color: #286513;
     margin: 2rem 0;
+    
+    @include respond(phone) {
+      margin: 2rem .5rem;
+    }
   }
   
   &__header {
@@ -31,21 +56,41 @@
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: .6rem;
+    
+    @include respond(phone) {
+      margin: 0 .5rem;
+      margin-bottom: .6rem;
+    }
   }
   
   &__title {
     font-weight: 700;
     font-size: 3rem;
     margin-bottom: .6rem;
+    
+    @include respond(tablet) {
+      font-size: 2.3rem;
+    }
+    
+    @include respond(phone) {
+      margin: 0 .5rem;
+      margin-bottom: .6rem;
+    }
   }
   
   &__phraseNoticia {
     font-weight: 500;
     font-size: 1.3rem;
+    
+    @include respond(phone) {
+      margin: 0 .5rem;
+    }
   }
   
   &__main {
-    
+    @include respond(phone) {
+      order: 0;
+    }
   }
   
   &__portraitBox {
@@ -54,6 +99,11 @@
     height: 40rem;
     background-color: red;
     margin: 2rem 0;
+    
+    @include respond(phone) {
+      height: 25rem;
+      margin: 0;
+    }
   }
   
   &__portraitImg {
@@ -81,20 +131,32 @@
     font-weight: 400;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    
+    @include respond(phone) {
+      margin: 2rem .5rem;
+    }
   }
   
   &__textContent {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     
-    p {
-      margin: 2rem 0;
+    p:not(:first-child) {
+      margin-top: 2rem;
+    }
+    
+    @include respond(phone) {
+      margin: 0 .5rem;
     }
   }
   
   &__aside {
     width: 30%;
     margin: 4rem 0;
+    
+    @include respond(tablet) {
+      display: none;
+    }
   }
   
   &__ultimasNoticias {
@@ -123,5 +185,9 @@
   &__ultimasNoticiasItem {
     padding: 1rem .5rem;
     border-bottom: 1px solid rgba(black, .5);
+  }
+  
+  &__footer {
+    width: 90.25rem !important;
   }
 }
