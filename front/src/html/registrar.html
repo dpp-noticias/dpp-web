@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="es">
 
 <head>
@@ -13,31 +13,29 @@
      
     </style>
 </head>
-<?php include "../Backend/Usuarios.php" ?>
-<?php include "../Backend/funciones.php"?>
 
 <body>
     <h1>Registrar Usuario</h1>
-    <form action="<?php echo $_SERVER["PHP_SELF"]  ?>" method="POST">
+    <form class="insertar">
 
         <div>
             <label for="nombreUser">Nombre de Usuario:</label>
-            <input type="text" name="nombreUser" id="nombreUser"  <?php mostrar_campo('nombreUser') ?>>
+            <input type="text" name="NombreUsuario" id="nombreUser" >
         </div>
 
         <div>
             <label for="">Correo Electronico:</label>
-            <input type="text" name="correo" id="" <?php mostrar_campo('correo') ?>>
+            <input type="text" name ="correo" id="correo">
         </div>
 
         <div>
             <label for="">Contraseña:</label>
-            <input type="text" name="contrasena" id="" <?php mostrar_campo('contrasena') ?> >
+            <input type="text" name= "Contrasena" id="contrasena">
         </div>
 
         <div>
             <label for="">Rol:</label>
-            <select name="rol" id="">
+            <select name="Rol" id="rol">
                 <option value="Administrador">Administrador</option>
                 <option value="Usuario">Usuario</option>
             </select>
@@ -49,12 +47,8 @@
         </div>
     </form>
 
-    <?php
-
-    if (isset($_POST['registro'])) {
-        registrarUsuarios();
-    }
-    ?>
+    <div id="errores"></div>
 </body>
 
 </html>
+<script src="../js/datos.js"></script>
