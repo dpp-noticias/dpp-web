@@ -2,7 +2,7 @@ const addUsuario = document.querySelector('.insertar');
 const nombreUsuario = document.getElementById('nombreUser').value
 const correo = document.getElementById('correo').value
 const contrasena = document.getElementById('contrasena').value
-const rol = document.getElementById('rol').value
+// const rol = document.getElementById('rol').value
 const divErrores = document.getElementById('errores')
 
 
@@ -22,6 +22,10 @@ addUsuario.addEventListener('submit', async e => {
             .then(data => {
                 if(data.status === "error") {
                     // console.log(data.result.errir_msg)
+                    // const ul= document.getElementById('ulErrores');
+                    // const li = document.createElement('li');
+                    // li.innerHTML=data.result.error_msg.join('')
+                    // ul.appendChild(li)
                     addUsuario.insertAdjacentHTML("afterend",`<p>${data.result.error_msg.join('')}</p>`)
 
                 }else {
