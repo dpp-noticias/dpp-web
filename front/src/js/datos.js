@@ -7,7 +7,7 @@ const divErrores = document.getElementById('errores')
 
 
 
-const url = "https://dppproject.000webhostapp.com/usuarios.php";
+const url = "http://sergiomartinez2m.es/usuarios.php";
 
 addUsuario.addEventListener('submit', async e => {
     e.preventDefault();
