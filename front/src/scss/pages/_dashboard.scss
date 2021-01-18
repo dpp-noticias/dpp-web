@@ -2,21 +2,21 @@
   display: grid;
   grid-template-columns:repeat (2, 1fr) ;
   grid-template-rows: repeat(3, min-content);
-  @include respondMin(tablet) {
+/*   @include respondMin(tablet) {
     grid-template-rows: repeat(4, min-content);
-  }
+  } */
   
 }
 
 .dashboard__body{
   
-  @include respondMin (phone){
+  @include respond (tablet){
     width: 46.125rem;
     margin: 0 auto 2.25rem auto;
   }
   
-  @include respondMin (tablet){
-      width: 77.25rem;
+  @include respondMin (laptop){
+      width: 87rem;
       margin: 0 auto 2.25rem auto;
   }
 
@@ -96,22 +96,35 @@
     &--front-daily{
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       display: grid;
-  
       display: flex;
       flex-direction: column;
+      background: #333333;
+
+      @include respondMin(tablet){
+        flex-direction: row-reverse;
+        height: 37.2rem;
+      }
      
       img{
        /*  max-width: 38.75rem; */
         max-height: 21.6875rem;
         object-fit: cover;
         object-position: center center;
+        @include respondMin(tablet){
+        margin: 1rem 1rem 1rem 0;
+        width: 48.913rem;
+      }
+        
       }
       div{
-        background: #333333;
         padding: .625rem 2.5125rem;
         color: white;
         line-height: 1.625rem;
-        
+        @include respondMin(tablet){
+        margin: 1rem 0 1rem 0;
+        direction: flex;
+        align-content: space-between;
+        }
   
       p:nth-child(1){ /* TITULO DE LA NOTICIA PRINCIPAL PORTADA */
         font-size: 1.25rem;
@@ -128,6 +141,20 @@
         @include respond (phone){
           display: none;
       }
+      @include respondMin (tablet){
+        padding-top: 1rem;
+      }
+
+    }
+    
+    @include respond (tablet){
+      p:nth-child(3){
+        display: none;
+      }
+    }
+    
+    p:nth-child(3){
+      padding-top: 10rem;
     }
     }
   }
@@ -151,14 +178,12 @@
       display: flex;
       flex-direction: column;
       img{
-        /*  max-width: 38.75rem; */
          max-height: 21.6875rem;
          object-fit: cover;
          object-position: center center;
        }
        p{
         background: #333333;
-        /* max-width: 38.75rem; */
         height: 4.4375rem;
         color: white;
         font-family: Fira Sans;

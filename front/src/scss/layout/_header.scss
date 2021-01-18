@@ -1,5 +1,4 @@
 .header{
-
   position: fixed;
   width: 100%;
   grid-column: 1/2;
@@ -8,47 +7,36 @@
   background-image: url('../assets/FONDO1.jpg');
   padding: 1rem 3rem;
   z-index: 100;
-
   &__burgerBox {
-
     cursor: pointer;
     height: 4rem;
     width: 4rem;
     
     &:hover .header__burger {
-
       color: #eee;
     }
     
     @include respondMin(tablet) {
-
       display: none;
-
     }
   }
   
   &__burger {
-
     width: 4rem;
     height: .5rem;
     color: black;
     background-color: currentColor;
     position: absolute;
-    
-    @include centerY();
-    
+    @include centerY();  
     transition: all .2s;
-
     &::before {
       content: '';
       width: 4rem;
       height: .5rem;
       background-color: currentColor;
-      
       position: absolute;
       transform: translateY(-1rem);
     }
-    
     &::after {
       content: '';
       width: 4rem;
@@ -58,8 +46,7 @@
       position: absolute;
       transform: translateY(1rem);
     }
-  }
-
+  }  
   &__logo {
     margin: 0 auto;
     display: flex;
@@ -67,12 +54,10 @@
     align-items: center;
     justify-content: center;
     text-shadow: 0.5px 1px 4px black;
-
     & img{
       width: 68px;
       height: 31px;
     }
-
     & p{
       font-style: italic;
       font-weight: 500;
