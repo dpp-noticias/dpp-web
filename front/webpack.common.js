@@ -3,29 +3,43 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { merge } = require('webpack-merge');
 const parts = require('./webpack.parts.js');
 
+const dashboardChunk = ['dashboard'];
+
 let htmlPageNames = [
-  'dashboard',
-  'login',
-  'olv_contrasena',
-  'registrar',
-  'sobreNosotros',
-  'detallesNoticia',
-  'futbolPeruano',
-  'ultimasNoticias',
-  'futbolInternacional'
+  ['dashboard', dashboardChunk],
+  ['login', null],
+  ['olv_contrasena', null],
+  ['registrar', ['datos']],
+  ['sobreNosotros', dashboardChunk],
+  ['detallesNoticia', dashboardChunk],
+  ['futbolPeruano', dashboardChunk],
+  ['ultimasNoticias', dashboardChunk],
+  ['futbolInternacional', dashboardChunk]
 ];
 
-let multipleHtmlPlugins = htmlPageNames.map(name => {
-  return new HtmlWebpackPlugin({
-    template: `./src/html/${name}.html`,
-    filename: `${name}.html`
-  })
+let multipleHtmlPlugins = htmlPageNames.map(info => {
+  const [ nameHTML, chunks ] = info;
+  
+  if(chunks) {
+    return new HtmlWebpackPlugin({
+      template: `./src/html/${nameHTML}.html`,
+      filename: `${nameHTML}.html`,
+      chunks
+    })
+  } else {
+    return new HtmlWebpackPlugin({
+      template: `./src/html/${nameHTML}.html`,
+      filename: `${nameHTML}.html`,
+      chunks: []
+    })
+  }
 });
 
 module.exports = merge(
   {
     entry: {
-      dashboard: './src/js/dashboard.js'
+      dashboard: './src/js/dashboard.js',
+      datos: './src/js/datos.js'
     },
     plugins: [].concat(multipleHtmlPlugins)
   },
