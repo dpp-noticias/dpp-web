@@ -10,7 +10,8 @@ let htmlPageNames = [
   'registrar',
   'sobreNosotros',
   'detallesNoticia',
-  'futbolPeruano'
+  'futbolPeruano',
+  'ultimasNoticias'
 ];
 
 let multipleHtmlPlugins = htmlPageNames.map(name => {
