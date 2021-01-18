@@ -88,9 +88,7 @@
   
   &__noticeItem {
     display: flex;
-    
     padding: 1rem 0;
-    
     &:not(:last-child) {
       border-top: 1px solid rgba(black, .2);
       border-bottom: 1px solid rgba(black , .2);
@@ -101,11 +99,9 @@
     width: 30%;
     height: 8rem;
     margin-right: 1rem;
-    
     @include respond(tablet) {
       width: 60%;
     }
-    
     @include respond(sm-phone) {
       width: 90%;
     }
