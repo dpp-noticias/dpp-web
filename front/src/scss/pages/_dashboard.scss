@@ -10,13 +10,13 @@
 
 .dashboard__body{
   
-  @include respond (tablet){
-    width: 46.125rem;
+  @include respondMin (phone){
+    width: 50.125rem;
     margin: 0 auto 2.25rem auto;
   }
   
   @include respondMin (laptop){
-      width: 87rem;
+      width: 77.25rem;
       margin: 0 auto 2.25rem auto;
   }
 
@@ -24,8 +24,11 @@
   
     &--noticeBox {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-        grid-auto-rows: 9rem;
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        grid-auto-rows: 10rem;
+        justify-content: center;
+        grid-gap: 2rem;
+        margin-top: 1rem;
 
         @include respondMin (phone){ 
           margin: 1.25rem 0rem 0rem 0rem;
@@ -36,10 +39,6 @@
           margin: 1.25rem 0 0 0;
           grid-auto-rows: 27.375rem;
         }
-     
-        justify-content: center;
-        grid-gap: 2rem;
-        margin-top: 1rem;
       }
     
       &--notice {
@@ -55,7 +54,6 @@
         }
         @include respondMin(tablet){
           margin-top: 0rem;
-          
           height: 100%;
         }
         img {
@@ -74,8 +72,11 @@
         .content{
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
-          margin: .5rem;
+          justify-content: space-between;
+          padding:  .5rem;
+          height: 100%;
+          box-sizing: border-box;
+          
           div:nth-child(2){
             font-size: 1.25rem;
           }
@@ -100,61 +101,72 @@
       flex-direction: column;
       background: #333333;
 
-      @include respondMin(tablet){
+      @include respondMin(laptop){
         flex-direction: row-reverse;
         height: 37.2rem;
       }
      
       img{
        /*  max-width: 38.75rem; */
-        max-height: 21.6875rem;
+        height: 21.6875rem;
         object-fit: cover;
         object-position: center center;
-        @include respondMin(tablet){
-        margin: 1rem 1rem 1rem 0;
-        width: 48.913rem;
+        width: 100%;
+        @include respondMin(laptop){
+        padding: 1.5rem;
+        display: flex;
+        align-self: center;
+        width: 40rem;
+        height: 37rem;
       }
         
       }
-      div{
+      .paragraphs{
         padding: .625rem 2.5125rem;
         color: white;
         line-height: 1.625rem;
-        @include respondMin(tablet){
+        @include respondMin(laptop){
         margin: 1rem 0 1rem 0;
-        direction: flex;
-        align-content: space-between;
+        display: flex;
+        flex-direction: column;
+        
+        
         }
-  
-      p:nth-child(1){ /* TITULO DE LA NOTICIA PRINCIPAL PORTADA */
+        
+
+      div:nth-child(1){ /* TITULO DE LA NOTICIA PRINCIPAL PORTADA */
         font-size: 1.25rem;
         line-height: 2.375rem;
         font-family: Fira Sans;
         
-        @include respondMin (tablet){
-          font-size: 2rem;
+        @include respondMin (laptop){
+          font-size: 2.5rem;
+        
+          
         }
       }
       
-      p:nth-child(2){
+      div:nth-child(2){
         line-height: 1.2rem;
         @include respond (phone){
           display: none;
       }
-      @include respondMin (tablet){
-        padding-top: 1rem;
+      @include respondMin (laptop){
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
       }
 
     }
     
-    @include respond (tablet){
-      p:nth-child(3){
+    @include respond (laptop){
+      div:nth-child(3){
         display: none;
       }
     }
     
-    p:nth-child(3){
-      padding-top: 10rem;
+    div:nth-child(3){
+     margin-top: 18rem;
     }
     }
   }
@@ -177,18 +189,49 @@
       display: grid;
       display: flex;
       flex-direction: column;
+      @include respondMin(phone){
+        flex-direction: row-reverse;
+        height: 30rem;
+      }
       img{
-         max-height: 21.6875rem;
+         height: 21.6875rem;
          object-fit: cover;
          object-position: center center;
+         @include respondMin(phone){
+           width: 50%;
+           height: 100%;
+         }
        }
-       p{
+       div{
         background: #333333;
         height: 4.4375rem;
         color: white;
         font-family: Fira Sans;
         font-size: 1.25rem;
         padding: .625rem 2.3125rem;        
+        @include respondMin(phone){
+          width: 100%;
+          height: 30rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+        p:nth-child(1){
+          @include respondMin(phone){
+          font-size: 2rem;
+        }
+        }
+        p:nth-child(2){
+          @include respond(phone){
+            display: none;
+          }
+
+        }
+        p:nth-child(3){
+          @include respond(phone){
+            display: none;
+          }
+        }
       }
     }
   }
