@@ -7,14 +7,14 @@ const dashboardChunk = ['dashboard'];
 
 let htmlPageNames = [
   ['dashboard', dashboardChunk],
-  ['login', null],
+  ['login', ['datos']],
   ['olv_contrasena', null],
   ['registrar', ['datos']],
   ['sobreNosotros', dashboardChunk],
   ['detallesNoticia', dashboardChunk],
   ['futbolPeruano', dashboardChunk],
   ['ultimasNoticias', dashboardChunk],
-  ['futbolInternacional', dashboardChunk]
+  ['futbolInternacional', dashboardChunk],
 ];
 
 let multipleHtmlPlugins = htmlPageNames.map(info => {
