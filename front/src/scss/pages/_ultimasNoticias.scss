@@ -1,0 +1,209 @@
+.dashboard {
+    display: grid;
+    grid-template-columns:repeat (2, 1fr) ;
+    grid-template-rows: repeat(3, min-content);
+  /*   @include respondMin(tablet) {
+      grid-template-rows: repeat(4, min-content);
+    } */
+    
+  }
+  
+  .ultimasNoticias__body{
+    
+    @include respondMin (phone){
+      width: 50.125rem;
+      margin: 0 auto 2.25rem auto;
+    }
+    
+    @include respondMin (laptop){
+        width: 77.25rem;
+        margin: 0 auto 2.25rem auto;
+    }
+  
+    
+    
+      &--noticeBox {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(20rem, 50.7rem));
+          grid-auto-rows: 10rem;
+          grid-gap: 2rem;
+          margin: 2rem 0;
+        }
+      
+        &--notice {
+          width: 100%;
+          height: 100%;
+          border:  .0625rem solid #C4C4C4;
+          display: flex;
+          flex-direction: row;
+          img {
+            width: 18.5625rem; 
+            object-fit: cover;
+            object-position: center center;
+          }
+          .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding:  .5rem;
+            height: 100%;
+            box-sizing: border-box;
+            
+            div:nth-child(2){
+              font-size: 1.25rem;
+            }
+            div:nth-child(3){
+              p{
+              float: right;
+            }
+            }
+          }
+    }
+      &--titleSeccion {
+          font-size: 1.5625rem;
+          text-align: center;
+          font-weight: bold;
+          padding: 1.0625rem 9.8125rem;
+      }
+    
+      &--front-daily{
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        background: #333333;
+  
+        @include respondMin(laptop){
+          flex-direction: row-reverse;
+          height: 37.2rem;
+        }
+       
+        img{
+          height: 21.6875rem;
+          object-fit: cover;
+          object-position: center center;
+          width: 100%;
+          @include respondMin(laptop){
+          padding: 1.5rem;
+          display: flex;
+          align-self: center;
+          width: 40rem;
+          height: 37rem;
+        }
+          
+        }
+        .paragraphs{
+          padding: .625rem 2.5125rem;
+          color: white;
+          line-height: 1.625rem;
+          @include respondMin(laptop){
+          margin: 1rem 0 1rem 0;
+          display: flex;
+          flex-direction: column;
+          
+          
+          }
+          
+  
+        div:nth-child(1){ /* TITULO DE LA NOTICIA PRINCIPAL PORTADA */
+          font-size: 1.25rem;
+          line-height: 2.375rem;
+          font-family: Fira Sans;
+          
+          @include respondMin (laptop){
+            font-size: 2.5rem;
+          
+            
+          }
+        }
+        
+        div:nth-child(2){
+          line-height: 1.2rem;
+          @include respond (phone){
+            display: none;
+        }
+        @include respondMin (laptop){
+          margin-top: 3rem;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
+  
+      }
+      
+      @include respond (laptop){
+        div:nth-child(3){
+          display: none;
+        }
+      }
+      
+      div:nth-child(3){
+       margin-top: 18rem;
+      }
+      }
+    }
+      &--publicity{
+        margin: 2.5rem 0rem 2.5625rem 0rem;
+        @include respondMin (phone){
+          display: none;
+        }
+    
+        img{
+          width: 100%;
+          height: 6.6875rem;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+      &--front-weekly{
+        margin-top: 3.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        @include respondMin(phone){
+          flex-direction: row-reverse;
+          height: 30rem;
+        }
+        img{
+           height: 21.6875rem;
+           object-fit: cover;
+           object-position: center center;
+           @include respondMin(phone){
+             width: 50%;
+             height: 100%;
+           }
+         }
+         div{
+          background: #333333;
+          height: 4.4375rem;
+          color: white;
+          font-family: Fira Sans;
+          font-size: 1.25rem;
+          padding: .625rem 2.3125rem;        
+          @include respondMin(phone){
+            width: 100%;
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+          }
+          p:nth-child(1){
+            @include respondMin(phone){
+            font-size: 2rem;
+          }
+          }
+          p:nth-child(2){
+            @include respond(phone){
+              display: none;
+            }
+  
+          }
+          p:nth-child(3){
+            @include respond(phone){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    
