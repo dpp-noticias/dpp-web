@@ -30,7 +30,7 @@
 
 const loginUsuario = document.querySelector('.login');
 
-const url2 = "http://localhost/apidpp/login.php";
+const url2 = "http://sergiomartinez2m.es/login.php";
 
 loginUsuario.addEventListener('submit', async e => {
     e.preventDefault();
